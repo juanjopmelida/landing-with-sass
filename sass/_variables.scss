@@ -1,0 +1,25 @@
+$deep-blue: #001656; 
+$r_deep-blue: 0; //valor Red del color definido arriba
+$g_deep-blue: 22; //valor Green
+$b_deep-blue: 86; //valor Blue
+
+$light-blue: #4D94FF;
+$r_light-blue: 25;
+$g_light-blue: 117;
+$b_light-blue: 255;
+
+$alpha_cover: .6; //Valor de transparencia de la imagen cover
+
+$black: #333333;
+$grey: #EAEAEA;
+$pure-white: #FFF;
+$almost-white: #FAFAFA;
+
+$cover_picture: "../assets/img/cover-picture.png"; //Ruta de la imagen cover, note los ..
+
+// Variables que representan los distintos pesos (font-weight) que tiene definida nuestra tipografia
+$light: 100;
+$regular: 300;
+$semi-bold: 400;
+$bold: 700;
+$ultra-bold: 900;

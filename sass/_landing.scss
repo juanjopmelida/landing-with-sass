@@ -1,0 +1,150 @@
+#section-1{
+	@include bg-covertint($r_deep-blue,$g_deep-blue,$b_deep-blue,$r_light-blue,$g_light-blue,$b_light-blue,$alpha_cover,$cover_picture);
+	height: 100vh; //100% de altura del viewport. 
+	color: $pure-white;
+}
+
+h1{
+    @include headers;
+    margin-bottom: 30px;
+}
+
+img{
+    height: 30vh;
+    @include center-horizontal;
+}
+
+.logo{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    color: $pure-white;
+
+    .bold{
+        font-weight: $ultra-bold;
+    }
+
+    .thin{
+        font-weight: $light;
+    }
+}
+
+p{
+    margin-top: 20px;
+    font-weight: $regular;
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    @include center-horizontal;
+    font-weight: $light;
+}
+
+#section-2{
+	height: 100vh;
+	background-color: $almost-white;
+	color: $light-blue;
+	
+	//--------------------------------------------------
+	//Agrega el codigo necesario para que H1:
+	//haga uso del mixin que definimos anteriormente
+	//tenga un peso de fuente de 300
+	//un margin-top de 0 y un margin-bottom de 40px
+	//--------------------------------------------------
+	
+	//Aqui esta el codigo de form, te lo damos por que puede resultar un poco pesado, pero de nuevo recuerda analizar lo que esta pasando, con las anidaciones, etc. 
+	form{
+		.form-element{
+			display: block;
+			input[type=text]{
+				border-style: none;
+				background: none;
+				outline: none;
+				border-bottom: solid 2px darken($almost-white,20%); // esta funcion -> darken(color,porcentaje), obscurece un color en cierto porcentaje
+				font-size: 50px;
+				font-weight: $light;
+				font-family: 'Lato', sans-serif;
+				width: 60%;
+				margin-left: 20%;
+				text-align: center;
+				margin-top: 15px;
+				margin-bottom: 30px;
+				color: $light-blue;
+				transition: all 0.3s ease 0s;
+				padding-bottom: 20px;
+
+				&:focus{
+					border-bottom: solid 2px $light-blue;
+				}
+			}
+			button{
+				font-size: 50px;
+				font-weight: $light;
+				font-family: 'Lato', sans-serif;
+				background: $light-blue;
+				border: 1px solid $light-blue;
+				color: $pure-white;
+				width: 60%;
+				outline: none;
+				margin-left: 20%;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				transition: all 0.3s ease 0s;
+				padding: 20px 20px 20px 20px;
+
+				&:hover{
+					background: none;
+					//background: $light-blue;
+					color: $light-blue;
+					border: 1px solid $light-blue;
+				}
+			}
+		}
+	}
+	
+	//Manda llamar el mixin que creamos al inicio de esta subseccion (placeholder) con el parametro, $color con valor de $almost-white obscurecido en un 20% (si revisaste el codigo anterior sabras como hacerlo)  y el parametro $font-weight de 100. 
+	
+}
+
+#section-3{
+	background-color: $light-blue;
+	height: 100vh;
+	
+	//Dale estilos a H1 con: 
+	//el mixin de headers
+	//color $pure-white
+	//margin-top de 0
+	
+	//Dale estilos a .pricing-table con:
+	// width: 100%
+	
+	//Si analizas el html notaras que pricing-table tiene anidados price y dentro de este estan anidados otros elementos como,
+	//img, p, etc. aqui te vamos a colocar lo que esperamos de cada elemento y ya a ti te toca generar el scss 
+	//que permita estilizar estas anidaciones. 
+	
+	//.price:
+	// color $almost-white
+	// texto alineado al centro
+	// tamaño de fuente de 30px
+	// ancho de 30%
+	// display como inline-block
+	// padding de 20px para todos los lados
+	//
+	//    img:
+	//        width de 15%
+	//
+	//    h2: 
+	//        peso de fuente de $300
+	// 
+	//    .description:
+	//        tamaño de fuente de 2vh
+	//
+	//    .money:
+	//        peso de fuente bold
+	//        tamaño de fuente de 50px
+	//
+	
+	// Finalmente al primer hijo de la clase (investiga el operador first-child) .price dale los siguientes estilos:
+	// border-right: solid 1px $pure-white;
+	// margin-left: 18%;
+	
+}

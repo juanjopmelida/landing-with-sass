@@ -1,0 +1,131 @@
+/* line 1, ../sass/_base.scss */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 1, ../sass/_landing.scss */
+#section-1 {
+  background: -webkit-linear-gradient(rgba(0, 22, 86, 0.6), rgba(25, 117, 255, 0.6)), url("../assets/img/cover-picture.png") no-repeat center center fixed;
+  background: -moz-linear-gradient(rgba(0, 22, 86, 0.6), rgba(25, 117, 255, 0.6)), url("../assets/img/cover-picture.png") no-repeat center center fixed;
+  background: -o-linear-gradient(rgba(0, 22, 86, 0.6), rgba(25, 117, 255, 0.6)), url("../assets/img/cover-picture.png") no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 22, 86, 0.6), rgba(25, 117, 255, 0.6)), url("../assets/img/cover-picture.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+}
+
+/* line 7, ../sass/_landing.scss */
+h1 {
+  font-weight: 100;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+/* line 12, ../sass/_landing.scss */
+img {
+  height: 30vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 17, ../sass/_landing.scss */
+.logo {
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+}
+/* line 23, ../sass/_landing.scss */
+.logo .bold {
+  font-weight: 900;
+}
+/* line 27, ../sass/_landing.scss */
+.logo .thin {
+  font-weight: 100;
+}
+
+/* line 32, ../sass/_landing.scss */
+p {
+  margin-top: 20px;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 100;
+}
+
+/* line 42, ../sass/_landing.scss */
+#section-2 {
+  height: 100vh;
+  background-color: #FAFAFA;
+  color: #4D94FF;
+}
+/* line 56, ../sass/_landing.scss */
+#section-2 form .form-element {
+  display: block;
+}
+/* line 58, ../sass/_landing.scss */
+#section-2 form .form-element input[type=text] {
+  border-style: none;
+  background: none;
+  outline: none;
+  border-bottom: solid 2px #c7c7c7;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #4D94FF;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 20px;
+}
+/* line 75, ../sass/_landing.scss */
+#section-2 form .form-element input[type=text]:focus {
+  border-bottom: solid 2px #4D94FF;
+}
+/* line 79, ../sass/_landing.scss */
+#section-2 form .form-element button {
+  font-size: 50px;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  background: #4D94FF;
+  border: 1px solid #4D94FF;
+  color: #FFF;
+  width: 60%;
+  outline: none;
+  margin-left: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease 0s;
+  padding: 20px 20px 20px 20px;
+}
+/* line 94, ../sass/_landing.scss */
+#section-2 form .form-element button:hover {
+  background: none;
+  color: #4D94FF;
+  border: 1px solid #4D94FF;
+}
+
+/* line 108, ../sass/_landing.scss */
+#section-3 {
+  background-color: #4D94FF;
+  height: 100vh;
+}
