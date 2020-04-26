@@ -1,0 +1,23 @@
+{
+  "name": "landing-with-sass",
+  "version": "1.0.0",
+  "description": "ejercicio de Sass para crear una landing page básica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanjopmelida/landing-with-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanjopmelida/landing-with-sass/issues"
+  },
+  "homepage": "https://github.com/juanjopmelida/landing-with-sass#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2"
+  }
+}
