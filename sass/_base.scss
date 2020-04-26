@@ -1,5 +1,6 @@
 body{
-	//Incluye aqui el mixin que acabas de crear (text-body)
+    //Incluye aqui el mixin que acabas de crear (text-body)
+    @include text-body;
 	width: 100%;
 	height: 100%;
 	margin: 0;

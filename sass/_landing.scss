@@ -1,55 +1,71 @@
+.content{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 #section-1{
 	@include bg-covertint($r_deep-blue,$g_deep-blue,$b_deep-blue,$r_light-blue,$g_light-blue,$b_light-blue,$alpha_cover,$cover_picture);
 	height: 100vh; //100% de altura del viewport. 
-	color: $pure-white;
-}
+    color: $pure-white;  
 
-h1{
-    @include headers;
-    margin-bottom: 30px;
-}
-
-img{
-    height: 30vh;
-    @include center-horizontal;
-}
-
-.logo{
-    font-size: 50px;
-    width: 100%;
-    text-align: center;
-    color: $pure-white;
-
-    .bold{
-        font-weight: $ultra-bold;
+    h1{
+        @include headers;
+        margin-bottom: 30px;
     }
 
-    .thin{
+    img{
+        height: 30vh;
+        @include center-horizontal;
+    }
+
+    .logo{
+        font-size: 50px;
+        width: 100%;
+        text-align: center;
+        color: $pure-white;
+
+        .bold{
+            font-weight: $ultra-bold;
+        }
+
+        .thin{
+            font-weight: $light;
+        }
+    }
+
+    p{
+        margin-top: 20px;
+        font-weight: $regular;
+        width: 60%;
+        text-align: center;
+        font-size: 20px;
+        @include center-horizontal;
         font-weight: $light;
     }
 }
 
-p{
-    margin-top: 20px;
-    font-weight: $regular;
-    width: 60%;
-    text-align: center;
-    font-size: 20px;
-    @include center-horizontal;
-    font-weight: $light;
-}
 
 #section-2{
 	height: 100vh;
 	background-color: $almost-white;
 	color: $light-blue;
 	
+	.content{
+		@include center-vertical;
+	}
 	//--------------------------------------------------
 	//Agrega el codigo necesario para que H1:
 	//haga uso del mixin que definimos anteriormente
 	//tenga un peso de fuente de 300
 	//un margin-top de 0 y un margin-bottom de 40px
-	//--------------------------------------------------
+    //--------------------------------------------------
+    h1 {
+        @include headers;
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-weight: $regular;
+    }
 	
 	//Aqui esta el codigo de form, te lo damos por que puede resultar un poco pesado, pero de nuevo recuerda analizar lo que esta pasando, con las anidaciones, etc. 
 	form{
@@ -102,7 +118,7 @@ p{
 	}
 	
 	//Manda llamar el mixin que creamos al inicio de esta subseccion (placeholder) con el parametro, $color con valor de $almost-white obscurecido en un 20% (si revisaste el codigo anterior sabras como hacerlo)  y el parametro $font-weight de 100. 
-	
+	@include placeholder(darken($almost-white, 20%), $light)
 }
 
 #section-3{
@@ -112,10 +128,49 @@ p{
 	//Dale estilos a H1 con: 
 	//el mixin de headers
 	//color $pure-white
-	//margin-top de 0
+    //margin-top de 0
+    h1 {
+        @include headers;
+        color: $pure-white;
+        margin-top: 0;
+    }
 	
 	//Dale estilos a .pricing-table con:
-	// width: 100%
+    // width: 100%
+    .pricing-table {
+        width: 100%;
+
+        .price {
+            color: $almost-white;
+            text-align: center;
+            font-size: 30px;
+            width: 30%;
+            display: inline-block;
+            padding: 20px;
+
+            img {
+                width: 15%;
+            }
+
+            h2 {
+                font-weight: $regular;
+            }
+
+            .description {
+                font-size: 2vh;
+            }
+
+            .money {
+                font-weight: $bold;
+                font-size: 50px;
+            }
+
+            .price:nth-first-child {
+                border-right: solid 1px $pure-white;
+                margin-left: 18%;
+            }
+        }
+    }
 	
 	//Si analizas el html notaras que pricing-table tiene anidados price y dentro de este estan anidados otros elementos como,
 	//img, p, etc. aqui te vamos a colocar lo que esperamos de cada elemento y ya a ti te toca generar el scss 

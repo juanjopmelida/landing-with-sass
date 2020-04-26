@@ -25,6 +25,13 @@
 	margin-right: auto;
 }
 
+@mixin center-vertical {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 @mixin headers{
 	font-weight: $light;
 	font-size: 70px;
@@ -36,6 +43,9 @@
 }
 
 @mixin placeholder ($color,$font-weight){
+    color: $color;
+    font-weight: $font-weight;
+    
 	::-webkit-input-placeholder {
 		color: $color;
 		font-weight: $font-weight;
